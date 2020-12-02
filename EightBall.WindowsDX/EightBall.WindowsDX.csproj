@@ -37,9 +37,15 @@
     <PackageReference Include="SharpDX.XAudio2" Version="4.0.1" />
     <PackageReference Include="SharpDX.XInput" Version="4.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Kadro, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <Reference Include="Kadro, Version=0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\Libraries\Debug\Kadro.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Reference Include="Kadro, Version=0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\Release\Kadro.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>

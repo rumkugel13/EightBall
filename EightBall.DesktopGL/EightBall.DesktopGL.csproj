@@ -28,9 +28,15 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <Reference Include="Kadro, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\Libraries\Debug\Kadro.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Reference Include="Kadro, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\Release\Kadro.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
