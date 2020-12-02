@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <OutputType>WinExe</OutputType>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>EightBall.DesktopGL</AssemblyTitle>
+    <Product>EightBall.DesktopGL</Product>
+    <Copyright>Copyright © rumkugel13 2020</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineConstants>TRACE;LINUX</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ball_8.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+  <Import Project="..\EightBall.Shared\EightBall.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Kadro, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\Debug\Kadro.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <Content Include="ball_8.ico" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <OutputType>WinExe</OutputType>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>EightBall.DesktopGL</AssemblyTitle>
+    <Product>EightBall.DesktopGL</Product>
+    <Copyright>Copyright © rumkugel13 2020</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ball_8.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+  <Import Project="..\EightBall.Shared\EightBall.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
+    <PackageReference Include="SharpDX" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Direct2D1" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Direct3D11" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Direct3D9" Version="4.0.1" />
+    <PackageReference Include="SharpDX.DXGI" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Mathematics" Version="4.0.1" />
+    <PackageReference Include="SharpDX.MediaFoundation" Version="4.0.1" />
+    <PackageReference Include="SharpDX.XAudio2" Version="4.0.1" />
+    <PackageReference Include="SharpDX.XInput" Version="4.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Kadro, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\Debug\Kadro.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ball_8.ico" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+</Project>

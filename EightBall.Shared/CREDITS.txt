@@ -1,0 +1,25 @@
+﻿Libraries:
+Monogame
+- http://www.monogame.net/
+- Copyright © 2009-2020 The MonoGame Team
+- License: Microsoft Public License (Ms-PL)
+Kadro
+- Not publicly available
+- Copyright © 2019-2020 rumkugel13
+- No License
+
+Assets:
+Pool assets
+- https://opengameart.org/content/8-ball-pool-assets
+- Copyright © 2016 Game_assets_66 @ opengameart.org
+- License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Background 
+- https://www.piqsels.com/en/public-domain-photo-sgdvw 
+- Copyright: www.piqsels.com
+- License: CC0 public domain
+Soundeffects 
+- http://soundbible.com/2035-Playing-Pool.html 
+- Copyright: Pool Shot @ soundbible.com
+- License: Public Domain
+
+self note: add copy of licenses

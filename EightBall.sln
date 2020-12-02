@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EightBall.DesktopGL", "EightBall.DesktopGL\EightBall.DesktopGL.csproj", "{6097A548-CF53-4017-A2E3-D7480B368BA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EightBall.WindowsDX", "EightBall.WindowsDX\EightBall.WindowsDX.csproj", "{4A413DC2-F9B9-43DC-B21F-2992CE46645E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EightBall.Shared", "EightBall.Shared\EightBall.Shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		EightBall.Shared\EightBall.Shared.projitems*{4a413dc2-f9b9-43dc-b21f-2992ce46645e}*SharedItemsImports = 5
+		EightBall.Shared\EightBall.Shared.projitems*{6097a548-cf53-4017-a2e3-d7480b368ba3}*SharedItemsImports = 5
+		EightBall.Shared\EightBall.Shared.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Debug|x86.Build.0 = Debug|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Release|x86.ActiveCfg = Release|Any CPU
+		{6097A548-CF53-4017-A2E3-D7480B368BA3}.Release|x86.Build.0 = Release|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Debug|x86.Build.0 = Debug|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Release|x86.ActiveCfg = Release|Any CPU
+		{4A413DC2-F9B9-43DC-B21F-2992CE46645E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9ACA229-6D4D-4616-8FE5-E1A970D27FA3}
+	EndGlobalSection
+EndGlobal

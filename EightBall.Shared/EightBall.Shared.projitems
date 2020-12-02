@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6efba8a9-a407-4029-bdd0-651d22a87386</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EightBall.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Background.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Ball.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Cue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Hole.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Rail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Table.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameScenes\GameOverScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameScenes\MainGameScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameScenes\MainMenuScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameScenes\SettingsScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Layers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Fonts\Arial16.spritefont" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Fonts\Arial24.spritefont" />
+    <None Include="$(MSBuildThisFileDirectory)Content\SoundEffects\ball_ball_mockup.wav" />
+    <None Include="$(MSBuildThisFileDirectory)Content\SoundEffects\ball_hole_mockup.wav" />
+    <None Include="$(MSBuildThisFileDirectory)Content\SoundEffects\ball_rolling_mockup.wav" />
+    <None Include="$(MSBuildThisFileDirectory)Content\SoundEffects\cue_ball_mockup.wav" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\background.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\background_hdpi.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_0.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_0_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_1.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_10.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_10_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_11.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_11_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_12.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_12_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_13.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_13_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_14.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_14_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_15.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_15_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_1_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_2.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_2_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_3.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_3_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_4.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_4_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_5.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_5_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_6.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_6_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_7.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_7_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_8.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_8_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_9.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\ball_9_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\complete.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\complete_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\cue.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\cue_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\cue_slanted.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\cue_slanted_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\table.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\table_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\triangle.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\triangle_hdpi.png" />
+    <None Include="$(MSBuildThisFileDirectory)CREDITS.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
