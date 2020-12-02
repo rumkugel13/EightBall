@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EightBall.DesktopGL", "EightBall.DesktopGL\EightBall.DesktopGL.csproj", "{6097A548-CF53-4017-A2E3-D7480B368BA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EightBall.DesktopGL", "EightBall.DesktopGL\EightBall.DesktopGL.csproj", "{6097A548-CF53-4017-A2E3-D7480B368BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EightBall.WindowsDX", "EightBall.WindowsDX\EightBall.WindowsDX.csproj", "{4A413DC2-F9B9-43DC-B21F-2992CE46645E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EightBall.WindowsDX", "EightBall.WindowsDX\EightBall.WindowsDX.csproj", "{4A413DC2-F9B9-43DC-B21F-2992CE46645E}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EightBall.Shared", "EightBall.Shared\EightBall.Shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5EAB965F-054E-43B7-AEC8-7C50923DB1B0}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\Debug\Kadro.dll = Libraries\Debug\Kadro.dll
+		Libraries\Release\Kadro.dll = Libraries\Release\Kadro.dll
+		Libraries\Debug\Kadro.pdb = Libraries\Debug\Kadro.pdb
+		Libraries\Release\Kadro.pdb = Libraries\Release\Kadro.pdb
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
