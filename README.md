@@ -6,6 +6,13 @@
 
 A 8-Ball Pool game made in [MonoGame](https://www.monogame.net/)
 
+## Features
+- Local multiplayer
+- Physics simulation
+
+## Issues
+- UI incomplete
+
 # Build Instructions
 
 ## Requirements
