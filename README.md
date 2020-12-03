@@ -19,6 +19,7 @@ A 8-Ball Pool game made in [MonoGame](https://www.monogame.net/)
 - .Net Core 3.1
 - Visual Studio (Code) or .Net Core SDK
 - MonoGame.Framework (provided via NuGet)
+- Kadro (provided via DLL)(Currently closed source)
 
 ## Build
 1. Clone this repository
