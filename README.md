@@ -4,7 +4,7 @@
 
 ## About
 
-A 8-Ball Pool game made in [MonoGame](https://www.monogame.net/)
+A [8-Ball Pool](https://en.wikipedia.org/wiki/Eight-ball) game made in [MonoGame](https://www.monogame.net/)
 
 ## Features
 - Local multiplayer
