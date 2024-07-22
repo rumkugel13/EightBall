@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <OutputType>WinExe</OutputType>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <AssemblyTitle>EightBall.DesktopGL</AssemblyTitle>
     <Product>EightBall.DesktopGL</Product>
     <Copyright>Copyright © rumkugel13 2020</Copyright>
@@ -25,8 +25,8 @@
   </PropertyGroup>
   <Import Project="..\EightBall.Shared\EightBall.Shared.projitems" Label="Shared" />
   <ItemGroup>
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
-    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="SharpDX" Version="4.0.1" />
     <PackageReference Include="SharpDX.Direct2D1" Version="4.0.1" />
     <PackageReference Include="SharpDX.Direct3D11" Version="4.0.1" />
@@ -56,4 +56,8 @@
   <ItemGroup>
     <None Include="app.manifest" />
   </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+	  <Message Text="Restoring dotnet tools" Importance="High" />
+	  <Exec Command="dotnet tool restore" />
+  </Target>
 </Project>
