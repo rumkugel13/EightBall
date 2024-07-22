@@ -30,8 +30,8 @@ namespace EightBall.Shared
 
         private void CreateBackground()
         {
-            this.gameObjectWorld.Add(new Background());
-            this.gameObjectWorld.Add(new Table(true));
+            this.gameObjectWorld.Add(new Background(this.Game.Content));
+            this.gameObjectWorld.Add(new Table(this.Game.Content, true));
         }
 
         protected override void OnDraw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -87,7 +87,7 @@ namespace EightBall.Shared
 
         private void CreateScene()
         {
-            SpriteFont largeFont = Assets.Get<SpriteFont>("Fonts/Arial24");
+            SpriteFont largeFont = this.Game.Content.Load<SpriteFont>("Fonts/Arial24");
 
             // TODO: decorate uielements to match game style
             TextBlock headLine = new TextBlock(largeFont, "Main Menu");

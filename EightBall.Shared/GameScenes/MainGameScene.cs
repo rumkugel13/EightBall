@@ -49,7 +49,7 @@ namespace EightBall.Shared
 
         private void CreateScene()
         {
-            SpriteFont labelFont = Assets.Get<SpriteFont>("Fonts/Arial16");
+            SpriteFont labelFont = this.Game.Content.Load<SpriteFont>("Fonts/Arial16");
 
             this.lbPlayerTurn = new Label(labelFont, "Player 1 plays");
             this.lbPlayerTurn.Alignment = Alignment.Top;
@@ -71,7 +71,7 @@ namespace EightBall.Shared
             this.lbRightPlayer.SetVisible(false);
             this.scene.AddChild(this.lbRightPlayer);
 
-            this.lbWinner = new Label(Assets.Get<SpriteFont>("Fonts/Arial24"), "Winner");
+            this.lbWinner = new Label(this.Game.Content.Load<SpriteFont>("Fonts/Arial24"), "Winner");
             this.lbWinner.Alignment = Alignment.Center;
             this.lbWinner.Opacity = 0.75f;
             this.lbWinner.SetVisible(false);
@@ -85,13 +85,13 @@ namespace EightBall.Shared
             this.pausePanel.Opacity = 0.75f;
             this.scene.AddChild(this.pausePanel);
 
-            TextBlock headLine = new TextBlock(Assets.Get<SpriteFont>("Fonts/Arial24"), "Pause Menu");
+            TextBlock headLine = new TextBlock(this.Game.Content.Load<SpriteFont>("Fonts/Arial24"), "Pause Menu");
             headLine.Alignment = Alignment.Center;
             headLine.PreferredPosition = new Point(0, -150);
             this.pausePanel.AddChild(headLine);
 
             float buttonOpacity = 0.65f;
-            SpriteFont buttonFont = Assets.Get<SpriteFont>("Fonts/Arial16");
+            SpriteFont buttonFont = this.Game.Content.Load<SpriteFont>("Fonts/Arial16");
 
             this.btContinue = new Button(buttonFont, "Continue");
             this.btContinue.Alignment = Alignment.Center;
@@ -377,7 +377,7 @@ namespace EightBall.Shared
 
         private void CreateBackground()
         {
-            this.gameObjectWorld.Add(new Background());
+            this.gameObjectWorld.Add(new Background(this.Game.Content));
         }
 
         private void CreateBalls()
@@ -419,37 +419,37 @@ namespace EightBall.Shared
             {
                 if (i < 7)
                 {
-                    this.gameObjectWorld.Add(new Ball(ballStartPositions[i], numbers[i]));
+                    this.gameObjectWorld.Add(new Ball(ballStartPositions[i], numbers[i], this.Game.Content));
                 }
                 else
                 {
-                    this.gameObjectWorld.Add(new Ball(ballStartPositions[i + 1], numbers[i]));
+                    this.gameObjectWorld.Add(new Ball(ballStartPositions[i + 1], numbers[i], this.Game.Content));
                 }
             }
 
-            this.eightBall = new Ball(eightBallPos, 8);
+            this.eightBall = new Ball(eightBallPos, 8, this.Game.Content);
             this.gameObjectWorld.Add(this.eightBall);
 
             // create placeholder balls
             for (int i = 1; i < 16; i++)
             {
-                Ball b = new Ball(Ball.BallPlaceholderPos(i), i);
+                Ball b = new Ball(Ball.BallPlaceholderPos(i), i, this.Game.Content);
                 b.Components.Get<RigidBodyComponent>().Active = false;
                 b.Components.Get<SpriteComponent>().Sprite.Color = Color.White * 0.5f;
                 this.gameObjectWorld.Add(b);
             }
 
-            this.whiteBall = new Ball(Ball.WhiteBallPos, 0);
+            this.whiteBall = new Ball(Ball.WhiteBallPos, 0, this.Game.Content);
             this.gameObjectWorld.Add(this.whiteBall);
 
-            this.cue = new Cue(Ball.WhiteBallPos, ScaledMesh(cueMesh, 10));
+            this.cue = new Cue(Ball.WhiteBallPos, ScaledMesh(cueMesh, 10), this.Game.Content);
             this.gameObjectWorld.Add(this.cue);
             this.cue.FocusOnBall(this.whiteBall.Transform.Position);
         }
 
         private void CreateTable()
         {
-            this.gameObjectWorld.Add(new Table());
+            this.gameObjectWorld.Add(new Table(this.Game.Content));
             const int railNum = 6, holeNum = 6;
 
             for (int i = 0; i < railNum; i++)

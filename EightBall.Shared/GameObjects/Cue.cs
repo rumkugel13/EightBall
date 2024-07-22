@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.Xna.Framework.Content;
 
 namespace EightBall.Shared
 {
@@ -31,8 +32,11 @@ namespace EightBall.Shared
         private float timeSinceStart = 0f;
         private float releaseTime = 0.5f;
 
-        public Cue(Vector2 focusPosition, Vector2[] collisionMesh)
+        ContentManager content;
+
+        public Cue(Vector2 focusPosition, Vector2[] collisionMesh, ContentManager content)
         {
+            this.content = content;
             this.Initialize(focusPosition, collisionMesh);
         }
 
@@ -54,11 +58,11 @@ namespace EightBall.Shared
 
             this.Add(rigidComponent);
 
-            Texture2D texture = Assets.Get<Texture2D>("Textures", $"cue");
+            Texture2D texture = this.content.Load<Texture2D>("Textures/cue");
             SpriteComponent component = new SpriteComponent(new Sprite(texture) { Name = "cue" }, Size.X / texture.Width);
             this.Add(component);
 
-            this.Add(new SoundComponent(Assets.Get<SoundEffect>("SoundEffects", "cue_ball_mockup")));
+            this.Add(new SoundComponent(this.content.Load<SoundEffect>("SoundEffects/cue_ball_mockup")));
         }
 
         public override void OnAdded(GameObjectWorld gameObjectWorld)

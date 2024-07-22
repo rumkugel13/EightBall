@@ -1,14 +1,15 @@
 ﻿using Kadro;
 using Kadro.Gameobjects;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace EightBall.Shared
 {
     public class Background : GameObject
     {
-        public Background()
+        public Background(ContentManager content)
         {
-            Texture2D texture = Assets.Get<Texture2D>("Textures", $"background");
+            Texture2D texture = content.Load<Texture2D>("Textures/background");
             SpriteComponent component = new SpriteComponent(new Sprite(texture) { Name = "background", LayerDepth = 0.5f }, WindowSettings.UnitsVisible.X / texture.Width);
             this.Add(component);
         }

@@ -1,6 +1,7 @@
 ﻿using Kadro;
 using Kadro.Gameobjects;
 using Kadro.Input;
+using Kadro.Templates;
 using Kadro.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -23,12 +24,12 @@ namespace EightBall.Shared
         {
             this.screen = new GUIScene();
 
-            this.text = new TextBlock(Assets.Get<SpriteFont>("Fonts/Arial24"), "Game Over! Press Escape to get back to main menu");
+            this.text = new TextBlock(game.Content.Load<SpriteFont>("Fonts/Arial24"), "Game Over! Press Escape to get back to main menu");
             this.text.Alignment = Alignment.Center;
             this.text.PreferredPosition = new Point(0, -30);
             this.screen.AddChild(this.text);
 
-            this.exit = new Button(Assets.Get<SpriteFont>("Fonts/Arial16"), "Exit");
+            this.exit = new Button(game.Content.Load<SpriteFont>("Fonts/Arial16"), "Exit");
             this.exit.Alignment = Alignment.Center;
             this.exit.PreferredPosition = new Point(0, 30);
             this.screen.AddChild(this.exit);
@@ -39,8 +40,8 @@ namespace EightBall.Shared
 
         private void CreateBackground()
         {
-            this.gameObjectWorld.Add(new Background());
-            this.gameObjectWorld.Add(new Table(true));
+            this.gameObjectWorld.Add(new Background(this.Game.Content));
+            this.gameObjectWorld.Add(new Table(this.Game.Content, true));
         }
 
         protected override void OnEnter()

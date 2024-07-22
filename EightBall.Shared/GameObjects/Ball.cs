@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using Microsoft.Xna.Framework.Content;
 
 namespace EightBall.Shared
 {
@@ -22,8 +23,11 @@ namespace EightBall.Shared
 
         public int Number { get; private set; }
 
-        public Ball(Vector2 position, int number)
+        ContentManager content;
+
+        public Ball(Vector2 position, int number, ContentManager content)
         {
+            this.content = content;
             this.Initialize(position, number);
         }
 
@@ -69,14 +73,14 @@ namespace EightBall.Shared
 
             System.Diagnostics.Debug.Assert(number >= 0 && number < 16);
 
-            Texture2D texture = Assets.Get<Texture2D>("Textures", $"ball_{number}");
+            Texture2D texture = this.content.Load<Texture2D>($"Textures/ball_{number}");
             SpriteComponent component = new SpriteComponent(new Sprite(texture) { Name = $"ball_{number}" }, Diameter / Math.Max(texture.Width, texture.Height));
             this.Add(component);
 
             // todo: create better sounds for future versions (e.g. make them last longer, by stretching last part?)
-            this.Add(new SoundComponent(Assets.Get<SoundEffect>(Folders.SoundEffects, "ball_ball_mockup")) { Name = "ball_ball_mockup" });
-            this.Add(new SoundComponent(Assets.Get<SoundEffect>(Folders.SoundEffects, "ball_hole_mockup")) { Name = "ball_hole_mockup" });
-            this.Add(new SoundComponent(Assets.Get<SoundEffect>(Folders.SoundEffects, "cue_ball_mockup")) { Name = "ball_rail_mockup" });
+            this.Add(new SoundComponent(this.content.Load<SoundEffect>(Folders.SoundEffects + "/ball_ball_mockup")) { Name = "ball_ball_mockup" });
+            this.Add(new SoundComponent(this.content.Load<SoundEffect>(Folders.SoundEffects + "/ball_hole_mockup")) { Name = "ball_hole_mockup" });
+            this.Add(new SoundComponent(this.content.Load<SoundEffect>(Folders.SoundEffects + "/cue_ball_mockup")) { Name = "ball_rail_mockup" });
         }
 
         public override void OnAdded(GameObjectWorld gameObjectWorld)

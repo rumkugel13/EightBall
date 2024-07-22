@@ -26,7 +26,7 @@ namespace EightBall.Shared
             this.screen = new GUIScene();
             this.screen.Opacity = 0.5f;
 
-            SpriteFont font = Assets.Get<SpriteFont>("Fonts/Arial16");
+            SpriteFont font = game.Content.Load<SpriteFont>("Fonts/Arial16");
 
             //this.text = new TextBlock("Game Over! Press Escape to get back to main menu", Alignment.Center);
             //this.text.FontSize = Font.FontSizes.Large;
@@ -58,8 +58,8 @@ namespace EightBall.Shared
 
         private void CreateBackground()
         {
-            this.gameObjectWorld.Add(new Background());
-            this.gameObjectWorld.Add(new Table(true));
+            this.gameObjectWorld.Add(new Background(this.Game.Content));
+            this.gameObjectWorld.Add(new Table(this.Game.Content, true));
         }
 
         protected override void OnEnter()
