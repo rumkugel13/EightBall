@@ -335,6 +335,7 @@ namespace EightBall.Shared
                     }
                     else if (!scoredSameType)
                     {
+                        // bug: this changes player number even after initial score sets it
                         this.gameState.ActivePlayer = this.gameState.InactivePlayer;
                     }
 
